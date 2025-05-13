@@ -1,0 +1,855 @@
+<!--This is the Home Page of Richard Mille-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="description" content="Watch Ecommerce Website Home Page" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, Watches, Richard Mille"
+    />
+    <meta name="author" content="Aarav Bhattarai" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Richard Mille - Home Page</title>
+    <style>
+      /*This is the stylesheet for home page*/
+      * {
+        /*Universal Selector*/
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        overflow-x: hidden;
+        scrollbar-width: none;
+      }
+
+      body {
+        height: 100%;
+        background-color: black;
+      }
+
+      .container {
+        /*Main container of the website*/
+        height: 100%;
+        width: 100%;
+      }
+
+      .top-part {
+        /*Top part of our website*/
+        height: 864px;
+        width: 100%;
+      }
+
+      .background-video {
+        /*Styling the background video*/
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+
+      nav {
+        /*This is for the navbar*/
+        background-color: #2b2b2b;
+        height: 129.6px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 32px;
+      }
+
+      .navp1 {
+        /*Styling left part of the navbar*/
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .menubar,
+      .cart_logo,
+      .contact_logo,
+      .login_logo {
+        /*Multiple select*/
+        height: 35px;
+        width: 35px;
+        cursor: pointer;
+      }
+
+      .nav-icons {
+        /*Styling left part of the navbar which contains icons*/
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .nav-icons a {
+        /*Styling anchor tag*/
+        color: white;
+        text-decoration: none;
+        font-size: 24px;
+      }
+
+      .nav-icons a:hover {
+        /*Adding hover effect*/
+        color: rgb(242, 102, 250);
+      }
+
+      .search-bar {
+        /*Styling the search-bar*/
+        text-align: center;
+        padding: 8px 16px;
+        border: 1px solid #444444;
+        border-radius: 20px;
+        color: #ffffff;
+        font-size: 16px;
+        background-color: #1a1a1a;
+      }
+
+      .search-bar::placeholder {
+        /*Styling the placeholder for our site*/
+        color: silver;
+      }
+
+      .text {
+        /*Styling the div that contains */
+        color: white;
+        font-size: 32px;
+        position: relative;
+        top: 259.2px;
+        left: 76.8px;
+      }
+
+      .main-text {
+        font-weight: bold;
+      }
+
+      .sub-text {
+        margin-top: 20px;
+        font-size: 24px;
+      }
+
+      .bottom-part {
+        /*This is the bottom part of our website*/
+        height: 1991px;
+        width: 100%;
+        color: white;
+        background-color: black;
+      }
+
+      .featured {
+        /*Styling the featured button*/
+        color: #b98f7d;
+        border-color: #b98f7d;
+        background-color: transparent;
+        height: 51.84px;
+        width: 153.6px;
+        font-weight: bold;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 20px;
+      }
+
+      .featured:hover {
+        /*Adding hover effect*/
+        background-color: #b98f7d;
+        color: white;
+      }
+
+      .about table {
+        /*a div called about -> table tag*/
+        margin: auto;
+      }
+
+      .slider h1 {
+        text-align: center;
+      }
+
+      .slider table {
+        margin: auto;
+      }
+
+      .slider h2 {
+        /*div called slider -> h2*/
+        text-align: center;
+      }
+
+      .products h1 {
+        text-align: center;
+      }
+
+      .products {
+        margin-top: 30px;
+        box-sizing: border-box;
+        padding: 10px;
+      }
+
+      .products table {
+        padding: 30px;
+        margin: auto;
+      }
+
+      .products h3 {
+        color: white;
+        text-align: center;
+      }
+
+      .about {
+        /*Styling the about part of our website*/
+        box-sizing: border-box;
+      }
+
+      footer {
+        /*Footer part of our site*/
+        box-sizing: border-box;
+        display: flex;
+        background-color: #333333;
+        padding: 10px;
+      }
+
+      .about-logo {
+        flex: 40%;
+        width: auto;
+      }
+
+      .about-logo p {
+        /*a div called about -> p tag*/
+        color: white;
+        font-size: 18px;
+      }
+
+      .about-logo h2 {
+        color: white;
+        font-size: 36px;
+      }
+
+      .quick-links {
+        flex: 25%;
+        width: 25%;
+      }
+
+      .quick-links h2 {
+        color: white;
+        font-size: 36px;
+      }
+
+      .quick-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      .contact-us-main {
+        flex: 25%;
+        width: 25%;
+      }
+
+      .contact-us {
+        /*Styling contact us*/
+        gap: 16px;
+        display: flex;
+      }
+
+      .contact-us img {
+        height: 40px;
+        width: 40px;
+      }
+
+      .contact-us p {
+        color: white;
+      }
+
+      .contact-us-text {
+        display: block;
+      }
+
+      .location img {
+        /*div called location -> img tag*/
+        height: 40px;
+        width: 40px;
+      }
+
+      .location {
+        display: flex;
+        gap: 16px;
+      }
+
+      .location p {
+        color: white;
+        margin-top: 8px;
+      }
+
+      .mail {
+        display: flex;
+        gap: 16px;
+      }
+
+      .mail img {
+        height: 40px;
+        width: 40px;
+      }
+
+      .mail-text {
+        color: white;
+        margin-top: 8px;
+      }
+
+      .partners {
+        flex: 20%;
+        width: 25%;
+        display: block;
+        box-sizing: border-box;
+      }
+
+      .partners img {
+        height: 50px;
+        width: 100px;
+      }
+
+      .copy-right {
+        color: white;
+        text-align: center;
+        padding: 10px;
+        background-color: #1d1c1c;
+      }
+
+      .partners h2 {
+        color: white;
+        font-size: 36px;
+      }
+
+      .apps img {
+        height: 40px;
+        width: 40px;
+      }
+
+      .blog-list {
+        background-color: #2b2b2b;
+        height: 50%;
+        width: 80%;
+        position: relative;
+        top: 10%;
+        left: 10%;
+      }
+
+      .blog-list p a {
+        color: rgb(50, 50, 255);
+        text-decoration: none;
+      }
+
+      .blog-list p a:hover {
+        text-decoration: underline;
+      }
+
+      .f1 {
+        /* It highlights the features */
+        height: 216px;
+        width: 169px;
+        background-color: #2b2b2b;
+        text-align: center;
+        padding-top: 30px;
+        border-radius: 20px;
+      }
+
+      .features {
+        /* This shows the different features of research page */
+        display: flex;
+        gap: 96px;
+        position: relative;
+        left: 400px;
+      }
+
+      .f1:hover {
+        /* This adds the hover effect */
+        background-color: #444444;
+        transform: scale(1.1);
+        box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+        transition: 0.3s;
+      }
+      .formm form label::placeholder {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!--This is the main container of the site-->
+      <div class="top-part">
+        <!--This is the top part of the site-->
+        <video class="background-video" autoplay loop muted>
+          <!--A background video has been added to the background-->
+          <source
+            src="./Assets/background/crystalclear_header_2.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <nav>
+          <!--This is the navbar of the site-->
+          <div class="navp1">
+            <!--This is the left part of the site-->
+            <img
+              class="menubar"
+              src="./Assets/icons/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+              alt="menu bar"
+            />
+            <input class="search-bar" type="text" placeholder="Search..." />
+          </div>
+          <h1
+            style="
+              color: white;
+              font-family: serif;
+              font-size: 32px;
+              cursor: pointer;
+            "
+          >
+            RICHARD MILLE
+          </h1>
+          <div class="nav-icons">
+            <!--This is the left side of the navbar containing all the icons-->
+            <a href="./home_page.html">Home</a>
+            <a href="./pages/blog_page.html">Blog</a>
+            <a href="./pages/product_page.html">Product</a>
+            <a href="./pages/research_page.html">Research</a>
+            <a href="./pages/about_us.html">About us</a>
+            <a href="./pages/login.html"
+              ><img
+                class="login_logo"
+                src="./Assets/icons/account_circle_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+                alt="login"
+            /></a>
+          </div>
+        </nav>
+        <div class="text">
+          <!--This is the hero text of the site-->
+          <h1 class="main-text">Richard Mille</h1>
+          <h2 class="sub-text">Explore the epitome of luxury and precision.</h2>
+          <button class="featured" onclick="handleScroll()">
+            Featured Timepieces
+          </button>
+        </div>
+      </div>
+      <div class="bottom-part">
+        <!--This is the bottom part of the website-->
+        <div class="products">
+          <!--This part contains the information of all the featured products-->
+          <h1>Featured Products</h1>
+          <table>
+            <tr>
+              <td>
+                <img src="./Assets/watchlist/w1.avif" alt="Datejust 36" />
+                <h3>Datejust 36</h3>
+              </td>
+              <td>
+                <img src="./Assets/watchlist/w2.avif" alt="Submariner" />
+                <h3>Submariner</h3>
+              </td>
+              <td>
+                <img src="./Assets/watchlist/w3.avif" alt="Sea-Dweller" />
+                <h3>Sea-Dweller</h3>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="about">
+          <!--This div contains a small information about our brand Richard Mille-->
+          <table>
+            <tr>
+              <td>
+                <img src="./Assets/watchlist/w1.avif" alt="Datejust 36" />
+              </td>
+              <td>
+                <h2 style="font-size: xx-large">Richard Mille</h2>
+                <br />
+                <p style="font-size: larger">
+                  Advancing with precision, miniature yet marvelous quantum and
+                  excellent craftmanship, RICHARD MILLE timepieces are
+                  specifically designed for those who appreciate exceptional
+                  watchmaking. <br />
+                  A NEW ERA IN WATCHMAKING <br />
+                  The RM 001 Tourbillon , launched in 2001 is the first Richard
+                  Mille watch which marked the dawn of a new chapter in
+                  watchmaking. <br />
+                  With over 80 models, RICHARD MILLE focuses on embracing
+                  innovation while blending it with the pure tradition of fine
+                  craftmanship.
+                </p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <div class="slider">
+          <!--Find the perfect fit for your style here-->
+          <h1>Discover The Perfect Fit That Compliments Your Style</h1>
+          <br />
+          <table>
+            <!--A table for our watchlist-->
+            <tr>
+              <td>
+                <img src="./Assets/watchlist/w4.avif" alt="Day-Date 36" /><br />
+                <h2>Classic's</h2>
+              </td>
+              <td>
+                <img src="./Assets/watchlist/w2.avif" alt="Explorer 36" /><br />
+                <h2>Men's</h2>
+              </td>
+              <td>
+                <img
+                  src="./Assets/watchlist/w1.avif"
+                  alt="Classic 1908"
+                /><br />
+                <h2>Women's</h2>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div
+        class="overview"
+        style="min-height: 1000px; width: 100%; background-color: black"
+      >
+        <!--This part contains the overview of all our webpages-->
+        <h1 style="color: white; text-align: center">Overview</h1>
+        <br /><br />
+        <div class="Product Page">
+          <h1 style="color: white; text-align: center">Product Page</h1>
+          <!--Overview of Product Page-->
+          <div style="background-color: black; height: 100px; width: 100%">
+            <h1 style="text-align: center; color: white">
+              Hear From Our Customers
+            </h1>
+          </div>
+
+          <div
+            class="reviews"
+            style="
+              background-color: black;
+              height: 550px;
+              width: 100%;
+              display: flex;
+              gap: 50px;
+              justify-content: center;
+            "
+          >
+            <div style="height: 200px; width: 20%">
+              <img
+                src="./Assets/product page reviews/King Birendra.jpg"
+                alt="person1"
+                style="height: 300px; width: 300px; border-radius: 100%"
+              />
+              <h1 style="color: white; text-align: center">King Birendra</h1>
+              <br />
+              <h2 style="color: white; text-align: center">
+                "This buying experience from richards was the most comfortable
+                and price worthy as I got the most beautiful timepiece that I
+                wanted the most..."
+              </h2>
+            </div>
+            <div style="height: 200px; width: 20%">
+              <img
+                src="./Assets/product page reviews/Nelson_Mandela_1994.jpg"
+                alt="person1"
+                style="height: 300px; width: 300px; border-radius: 100%"
+              />
+              <h1 style="color: white; text-align: center">Nelson Mandela</h1>
+              <br />
+              <h2 style="color: white; text-align: center">
+                "The watches are exquisite quality and worth every single
+                penny..."
+              </h2>
+            </div>
+            <div style="height: 200px; width: 20%">
+              <img
+                src="./Assets/product page reviews/balen-shah.png"
+                alt="person1"
+                style="height: 300px; width: 300px; border-radius: 100%"
+              />
+              <h1 style="color: white; text-align: center">Balen Shah</h1>
+              <br />
+              <h2 style="color: white; text-align: center">
+                "Richard Mille makes the quality watches, I have a whole
+                collection of Richard watches in my home..."
+              </h2>
+            </div>
+          </div>
+          <br /><br />
+          <button
+            style="
+              padding: 12px;
+              background: transparent;
+              color: white;
+              margin-left: 727px;
+              cursor: pointer;
+              border: 2px solid white;
+            "
+          >
+            <a
+              href="./pages/product_page.html"
+              style="text-decoration: none; color: white"
+              >Visit Link</a
+            >
+          </button>
+        </div>
+
+        <div
+          class="blog-page"
+          style="
+            min-height: 200px;
+            width: 100%;
+            background-color: black;
+            color: white;
+          "
+        >
+          <!--Overview of Blog Page-->
+          <br /><br />
+          <h1 style="text-align: center; color: white">Blog</h1>
+          <div class="blog-list">
+            <div
+              class="blog"
+              style="
+                height: fit-content;
+                width: 80%;
+                margin-top: 20px;
+                padding: 20px;
+              "
+            >
+              <h1>
+                “Impact of technology on the watch industry and consumer trends”
+              </h1>
+              <p>
+                Technology has deeply transformed the watch industry by changing
+                the customer preferences and making the changes to watches the
+                way they are designed and marketed...
+                <a href="./blog_post_1.html">Read More</a>
+              </p>
+            </div>
+            <br /><br />
+            <div
+              class="blog"
+              style="
+                height: fit-content;
+                width: 80%;
+                margin-top: 20px;
+                padding: 20px;
+              "
+            >
+              <h1>
+                "Topics that integrate technological <br />
+                advancements with watch design and sales"
+              </h1>
+              <p>
+                The integration of technological advancements with watch design
+                and sales has transformed the watch industry in recent years .
+                here are the topics that show how technological advancements is
+                changing both. Design and sales of watches...
+                <a href="./pages/blog_post_2.html">Read More</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <br /><br />
+        <button
+          style="
+            padding: 12px;
+            background: transparent;
+            color: white;
+            margin-left: 727px;
+            cursor: pointer;
+            border: 2px solid white;
+          "
+        >
+          <a
+            href="./pages/blog_page.html"
+            style="text-decoration: none; color: white"
+            >Visit Link</a
+          >
+        </button>
+        <br /><br />
+
+        <div
+          class="research-page"
+          style="
+            min-height: 200px;
+            width: 100%;
+            background-color: black;
+            color: white;
+          "
+        >
+          <!--Overview of Research Page-->
+          <br /><br />
+          <h1 style="text-align: center; color: white">Research</h1>
+          <br /><br />
+          <div class="features" style="color: white">
+            <!--This div showcases the main features of our website-->
+            <div class="f1">
+              <img
+                style="height: 50px; width: 50px"
+                src="./Assets/icons/person_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+                alt="user"
+              />
+              <h1>User Friendly</h1>
+            </div>
+            <div class="f1">
+              <img
+                style="height: 50px; width: 50px"
+                src="./Assets/icons/brush_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+                alt="user"
+              />
+              <h1>Engaging Design</h1>
+            </div>
+            <div class="f1">
+              <!--It highlights the features-->
+              <img
+                style="height: 50px; width: 50px"
+                src="./Assets/icons/star_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+                alt="user"
+              />
+              <h1>Interactive Features</h1>
+            </div>
+          </div>
+          <br /><br />
+          <button
+            style="
+              padding: 12px;
+              background: transparent;
+              color: white;
+              margin-left: 727px;
+              cursor: pointer;
+              border: 2px solid white;
+            "
+          >
+            <a
+              href="./pages/research_page.html"
+              style="text-decoration: none; color: white"
+              >Visit Link</a
+            >
+          </button>
+        </div>
+        <br /><br />
+
+        <div class="about">
+          <!--Over view of About Page-->
+          <div class="form">
+            <h1 style="color: white; text-align: center">About Us</h1>
+            <h1 style="color: white; text-align: center">
+              Give Your Feedback!
+            </h1>
+            <br /><br />
+            <div class="formm" style="display: flex; justify-content: center">
+              <form style="color: white">
+                <label style="color: white">Your Message:</label><br /><br />
+                <input
+                  placeholder="Type Your Message Here"
+                  type="text"
+                  style="
+                    height: 100px;
+                    width: 300px;
+                    background-color: black;
+                    border: 1px solid white;
+                    color: white;
+                  "
+                />
+              </form>
+            </div>
+          </div>
+          <br /><br />
+          <button
+            style="
+              padding: 12px;
+              background: transparent;
+              color: white;
+              margin-left: 727px;
+              cursor: pointer;
+              border: 2px solid white;
+            "
+          >
+            <a
+              href="./pages/about_us.html"
+              style="text-decoration: none; color: white"
+              >Visit Link</a
+            ></button
+          ><br /><br />
+        </div>
+      </div>
+
+      <footer>
+        <!--This part contains the footer of our website-->
+        <div class="about-logo">
+          <!--A div about our site-->
+          <h2>RICHARD MILLE</h2>
+          <br />
+          <p>
+            Discover the intricate craftsmanship of this luxury timepiece,
+            <br />designed with precision and elegance.
+          </p>
+        </div>
+        <div class="quick-links">
+          <h2>Quick Links</h2>
+          <!--Links to our internal pages-->
+          <br />
+          <a href="./home_page.html">Home</a><br /><br />
+          <a href="./pages/blog_page.html">Blog</a><br /><br />
+          <a href="./pages/product_page.html">Product</a><br /><br />
+          <a href="./pages/about_us.html">About us</a><br /><br />
+          <a href="./pages/research_page.html">Research</a><br /><br />
+        </div>
+        <div class="contact-us-main">
+          <div class="contact-us">
+            <!--Contact us-->
+            <img src="./Assets/icons/call.png" alt="call" />
+            <div class="contact-us-text">
+              <p>+01-5423201</p>
+              <p>9844563721</p>
+            </div>
+          </div>
+          <br />
+          <div class="location">
+            <!--div containing our location-->
+            <img src="./Assets/icons/location.png" alt="location" />
+            <div class="location-text">
+              <p>Kamalpokhari, Nepal</p>
+            </div>
+          </div>
+          <br />
+          <div class="mail">
+            <!--Contact Us through mail-->
+            <img src="./Assets/icons/mail.png" alt="mail" />
+            <div class="mail-text">
+              <p>richardmille@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="partners">
+          <!--This div contains all the social links-->
+          <h2>Follow us</h2>
+          <br />
+          <div class="apps">
+            <a href="https://www.facebook.com/"
+              ><img src="./Assets/icons/facebook.png" alt="facebook"
+            /></a>
+            <a href="https://www.instagram.com/"
+              ><img src="./Assets/icons/insta.png" alt="insta"
+            /></a>
+            <a href="https://www.x.com/"
+              ><img src="./Assets/icons/twitter.png" alt="twitter"
+            /></a>
+            <a href="https://www.youtube.com/"
+              ><img src="./Assets/icons/yt.png" alt="yt"
+            /></a>
+            <a href="https://www.pinterest.com/"
+              ><img src="./Assets/icons/pin.png" alt="pin"
+            /></a>
+          </div>
+        </div>
+      </footer>
+      <div class="copy-right">RICHARD MILLE &copy; All Rights Reserved</div>
+      <!--This is the trademark of our website-->
+    </div>
+  </body>
+</html>

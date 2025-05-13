@@ -1,0 +1,510 @@
+/* Global styles for resetting margins, paddings, and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Styling for html and body elements */
+html,
+body {
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+
+/* Styling for body element */
+body {
+  height: fit-content;
+}
+
+/* Styling for the container class */
+.container {
+  height: fit-content;
+  width: 100%;
+}
+
+/* Styling for the top part of the page */
+.top-part {
+  height: 864px;
+  width: 100%;
+  background-image: url("../Assets/background/header-bg_enhanced.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Styling for the navigation bar */
+nav {
+  background-color: #2b2b2b;
+  height: 129.6px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 32px;
+}
+
+/* Styling for the first part of the navigation bar */
+.navp1 {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Styling for individual icons like menubar, cart, contact, and login */
+.menubar,
+.cart_logo,
+.contact_logo,
+.login_logo {
+  height: 35px;
+  width: 35px;
+  cursor: pointer;
+}
+
+/* Styling for the navigation icons section */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Styling for navigation links inside nav-icons */
+.nav-icons a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+.nav-icons a:hover {
+  color: rgb(242, 102, 250);
+}
+
+/* Styling for the search bar */
+.search-bar {
+  text-align: center;
+  padding: 8px 16px;
+  border: 1px solid #444444;
+  border-radius: 20px;
+  color: #ffffff;
+  font-size: 16px;
+  background-color: #1a1a1a;
+}
+
+/* Styling for the placeholder text in the search bar */
+.search-bar::placeholder {
+  color: silver;
+}
+
+/* Styling for text elements */
+.text {
+  color: white;
+  font-size: 32px;
+  position: relative;
+  top: 259.2px;
+  left: 76.8px;
+}
+
+/* Styling for the main-text class */
+.main-text {
+  font-weight: bold;
+}
+
+/* Styling for the sub-text class */
+.sub-text {
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+/* Styling for the view-collection button */
+.view-collection {
+  color: #b98f7d;
+  border-color: #b98f7d;
+  background-color: transparent;
+  height: 51.84px;
+  width: 153.6px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.view-collection:hover {
+  background-color: #b98f7d;
+  color: white;
+}
+
+/* Styling for the sorting section */
+.sorting {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: white;
+  position: relative;
+  left: 1228.8px;
+  top: 129.6px;
+}
+
+/* Styling for sorting labels */
+.sorting label {
+  font-size: 19.2px;
+  font-weight: bold;
+}
+
+/* Styling for the custom select dropdown */
+.custom-select {
+  background-color: #1a1a1a;
+  color: white;
+  padding: 8px;
+  border: 1px solid #444444;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+  width: 153.6px;
+  text-align: center;
+}
+.custom-select:hover {
+  background-color: #333333;
+  border-color: #b98f7d;
+}
+
+/* Styling for the bottom part of the page */
+.bottom-part {
+  height: 1296px;
+  width: 100%;
+  color: white;
+  background-color: black;
+}
+
+/* Styling for h2 inside the bottom-part */
+.bottom-part h2 {
+  font-weight: bold;
+  font-family: serif;
+  display: flex;
+  justify-content: center;
+}
+
+/* Styling for the watchlist section */
+.watchlist {
+  margin-top: 64px;
+}
+
+/* Styling for the watch container */
+.watch-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  position: relative;
+  top: 86.4px;
+}
+
+/* Styling for individual watch images */
+.watch-image {
+  width: 30%;
+  max-width: 400px;
+  position: relative;
+}
+
+/* Styling for h1 inside watch-image */
+.watch-image h1 {
+  position: relative;
+  bottom: 86.4px;
+  left: 120px;
+}
+
+/* Styling for images inside watch-image */
+.watch-image img {
+  height: 432px;
+  width: 100%;
+  border-radius: 10px;
+}
+.watch-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Styling for hidden objects */
+.hidden-objects {
+  opacity: 0;
+}
+
+/* Showing hidden objects on hover of watch-image */
+.watch-image:hover .hidden-objects {
+  opacity: 1;
+}
+
+/* Styling for images inside hidden objects */
+.hidden-objects img {
+  height: 30px;
+  width: 30px;
+  position: relative;
+  bottom: 432px;
+  left: 300px;
+}
+
+/* Styling for buttons inside hidden objects */
+.hidden-objects button {
+  position: relative;
+  bottom: 77.76px;
+  left: 100px;
+  background-color: #b98f7d;
+  color: white;
+  border: none;
+  padding: 12.8px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Styling for product details section */
+#product-details {
+  height: 604.8px;
+  width: 1075.2px;
+  background-color: #1e1e1e;
+  position: fixed;
+  left: 230.4px;
+  top: 55px;
+  display: none;
+  z-index: 0;
+  border-radius: 10px;
+  padding: 32px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+/* Styling for the product header */
+.product-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+/* Styling for the product title */
+#product-title {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* Styling for the close button */
+.close-btn {
+  background-color: #b98f7d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+.close-btn:hover {
+  background-color: #9f7b6c;
+}
+
+/* Styling for the product content section */
+.product-content {
+  display: flex;
+  gap: 32px;
+}
+
+/* Styling for product information */
+.product-info {
+  position: relative;
+  top: 86.4px;
+}
+
+/* Styling for the product image */
+#product-image {
+  height: 518.4px;
+  width: 614.4px;
+}
+
+/* Styling for the product description */
+#product-description {
+  font-size: 19.2px;
+  margin-bottom: 16px;
+}
+
+/* Styling for product pricing section */
+.product-pricing {
+  font-size: 24px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Styling for prices with strike-through */
+.strike-through {
+  text-decoration: line-through;
+  color: #ff6b6b;
+}
+
+/* Styling for the discounted price */
+#discounted-price {
+  color: #b98f7d;
+  font-weight: bold;
+}
+
+/* Styling for the add-to-cart button */
+.add-to-cart-btn {
+  background-color: #b98f7d;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 12.8px 24px;
+  font-size: 19.2px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.add-to-cart-btn:hover {
+  background-color: #9f7b6c;
+}
+
+/* Styling for product rating */
+.product-rating {
+  font-size: 24px;
+  color: #ffcc00;
+  margin-bottom: 15px;
+}
+
+/* Styling for the footer section */
+footer {
+  box-sizing: border-box;
+  display: flex;
+  background-color: #333333;
+  padding: 10px;
+}
+
+/* Styling for the about logo section */
+.about-logo {
+  flex: 40%;
+  width: auto;
+}
+
+/* Styling for text inside about-logo */
+.about-logo p {
+  color: white;
+  font-size: 16px;
+}
+
+/* Styling for h2 inside about-logo */
+.about-logo h2 {
+  color: white;
+  font-size: 32px;
+}
+
+/* Styling for quick-links section */
+.quick-links {
+  flex: 25%;
+  width: 25%;
+}
+
+/* Styling for h2 inside quick-links */
+.quick-links h2 {
+  color: white;
+  font-size: 32px;
+}
+
+/* Styling for links inside quick-links */
+.quick-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Styling for the contact-us main section */
+.contact-us-main {
+  flex: 25%;
+  width: 25%;
+}
+
+/* Styling for the contact-us section */
+.contact-us {
+  gap: 16px;
+  display: flex;
+}
+
+/* Styling for images inside contact-us */
+.contact-us img {
+  height: 40px;
+  width: 40px;
+}
+
+/* Styling for text inside contact-us */
+.contact-us p {
+  color: white;
+}
+
+/* Styling for contact-us-text class */
+.contact-us-text {
+  display: block;
+}
+
+/* Styling for location section */
+.location {
+  display: flex;
+  gap: 16px;
+}
+
+/* Styling for images inside location */
+.location img {
+  height: 40px;
+  width: 40px;
+}
+
+/* Styling for text inside location */
+.location p {
+  color: white;
+  margin-top: 8px;
+}
+
+/* Styling for the mail section */
+.mail {
+  display: flex;
+  gap: 16px;
+}
+
+/* Styling for images inside mail */
+.mail img {
+  height: 40px;
+  width: 40px;
+}
+
+/* Styling for mail-text class */
+.mail-text {
+  color: white;
+  margin-top: 8px;
+}
+
+/* Styling for the partners section */
+.partners {
+  flex: 20%;
+  width: 25%;
+  display: block;
+  box-sizing: border-box;
+}
+
+/* Styling for images inside partners */
+.partners img {
+  height: 50px;
+  width: 100px;
+}
+
+/* Styling for the copyright text */
+.copy-right {
+  color: white;
+  text-align: center;
+  padding: 10px;
+  background-color: #1d1c1c;
+}
+
+/* Styling for h2 inside partners */
+.partners h2 {
+  color: white;
+  font-size: 32px;
+}
+
+/* Styling for apps section */
+.apps img {
+  height: 40px;
+  width: 40px;
+}

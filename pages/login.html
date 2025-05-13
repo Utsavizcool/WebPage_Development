@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="description" content="Watch Ecommerce Website Login Page" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, Watches, Richard Mille"
+    />
+    <meta name="author" content="Aarav Bhattarai" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <style> /*Using internal css*/
+      * { /*Universal Selector*/
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: sans-serif;
+        background-color: white;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container { /*The main container of the website*/
+        display: flex;
+        width: 820px;
+        height: 518.4px;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        position: relative;
+        top: 100px;
+        border: 1px solid gray;
+      }
+
+      .left-part { /*this is the left part of the form div*/
+        width: 384px;
+        background: #5a9bff;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+      }
+
+      .left-part h1 { /*div called left-part -> h1 tag*/
+        font-size: 28px;
+        margin-bottom: 10px;
+      }
+
+      .left-part p {
+        font-size: 14px;
+      }
+
+      .right-part { /*Right part of the div containing form*/
+        width: 384px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      .right-part h2 {
+        margin-bottom: 20px;
+        font-size: 24px;
+        color: #333;
+      }
+
+      .form {
+        margin-bottom: 15px;
+      }
+
+      .form label { /*a div called form -> label tag*/
+        display: block;
+        font-size: 14px;
+        margin-bottom: 5px;
+      }
+
+      .form input { /*a div called form -> input tag*/
+        width: 364.8px;
+        padding: 10px;
+        font-size: 14px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+      }
+
+      .forgot-pass { /*Styling forgot password*/
+        margin-bottom: 20px;
+        text-align: right;
+      }
+
+      .forgot-pass a { /*Styling anchor tag*/
+        font-size: 12px;
+        text-decoration: none;
+        color: #5a9bff;
+      }
+
+      .forgot-pass a:hover { /*Adding hover effect*/
+        text-decoration: underline;
+      }
+
+      .submit { /*Styling the submit button*/
+        display: block;
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        background: #5a9bff;
+        color: white;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        text-align: center;
+      }
+
+      .submit:hover { /*adding hover effect to the submit button*/
+        background: #4888e6;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">  <!--This is the main container of the site-->
+      <div class="left-part"> <!--This is the left part -->
+        <h1>Hello, Welcome!</h1>
+        <p>Richard Mille Login Page</p>
+      </div>
+      <div class="right-part"> <!--This is the right part of our form-->
+        <h2>Login</h2>
+        <form onsubmit="handleSubmit()"> <!--handleSubmit() function will run on form submission-->
+          <div class="form">
+            <label>Username</label>
+            <input type="text" id="username" placeholder="Username" />
+          </div>
+          <div class="form">
+            <label>Password</label>
+            <input type="password" id="password" placeholder="Password" />
+          </div>
+          <div class="forgot-pass">
+            <a href="#">Forgot password?</a>
+          </div>
+          <button type="submit" class="submit">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <script> //The JavaScript Part of the Login Form
+      function handleSubmit() {
+        var Username = document.getElementById("username").value;
+        var Password = document.getElementById("password").value;
+
+        if (Username == "" || Password == "") { //User Form Validation 
+          alert("Fields cannot be left empty!!");
+        } else if (Username == "user" && Password == "Webdev") {
+          alert("Welcome!!");
+        } else {
+          alert("Username or Password Incorrect!!");
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,691 @@
+<!--This is the research page of our website-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="description" content="Watch Ecommerce Website Research Page" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, Watches, Richard Mille"
+    />
+    <meta name="author" content="Dipti Subedi" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Research Page</title>
+    <style>
+      /* This is the research page of our website*/
+      * {
+        /* Universal Selector */
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        overflow-x: hidden;
+        scrollbar-width: none;
+      }
+
+      body {
+        /* This shows the body part of our website */
+        height: fit-content;
+      }
+
+      .container {
+        /* This is the main container of the webpage */
+        height: fit-content;
+        width: 100%;
+        background-color: black;
+      }
+
+      .top-part {
+        /* This is the top part of the webpage */
+        height: 864px;
+        width: 100%;
+      }
+
+      nav {
+        /* It shows the nav bar of the website */
+        background-color: #2b2b2b;
+        height: 129.6px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 32px;
+      }
+
+      .navp1 {
+        /* This is the left side of nav bar */
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .menubar,
+      .cart_logo,
+      .contact_logo,
+      .login_logo {
+        height: 35px;
+        width: 35px;
+        cursor: pointer;
+      }
+
+      .nav-icons {
+        /* This shows the icons on our nav bar */
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .nav-icons a {
+        /* Styling the anchor tag */
+        color: white;
+        text-decoration: none;
+        font-size: 24px;
+      }
+      .nav-icons a:hover {
+        /* adding hover effect */
+        color: rgb(242, 102, 250);
+      }
+
+      .search-bar {
+        /* This shows the search bar of the website */
+        text-align: center;
+        padding: 8px 16px;
+        border: 1px solid #444444;
+        border-radius: 20px;
+        color: #ffffff;
+        font-size: 16px;
+        background-color: #1a1a1a;
+      }
+
+      .search-bar::placeholder {
+        /* this shows the placeholder of searchbar */
+        color: silver;
+      }
+
+      .text {
+        /* It shows the text in website */
+        color: #c0c0c0;
+        font-size: 32px;
+        position: relative;
+        top: 172px;
+        left: 537px;
+      }
+
+      .main-text {
+        /* It shows the heading of website  */
+        font-weight: bold;
+      }
+
+      .sub-text {
+        /* It shows the sub texts of website */
+        position: relative;
+        margin: 17px;
+        left: 46px;
+      }
+
+      .f1 {
+        /* It highlights the features */
+        height: 216px;
+        width: 169px;
+        background-color: #2b2b2b;
+        text-align: center;
+        padding-top: 30px;
+        border-radius: 20px;
+      }
+
+      .features {
+        /* This shows the different features of research page */
+        display: flex;
+        gap: 96px;
+        position: relative;
+        left: 429px;
+        bottom: 362px;
+      }
+
+      .f1:hover {
+        /* This adds the hover effect */
+        background-color: #444444;
+        transform: scale(1.1);
+        box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+        transition: 0.3s;
+      }
+
+      .content {
+        /* It contains the content of our research page */
+        height: fit-content;
+        padding-top: 40px;
+        width: 80%;
+        background: linear-gradient(
+            135deg,
+            rgba(0, 0, 0, 0.8),
+            rgba(60, 60, 60, 0.9)
+          ),
+          url("../Assets/background/research_page.webp");
+        background-size: cover;
+        background-position: center;
+        position: relative;
+        left: 153.6px;
+        bottom: 259px;
+        border-radius: 20px;
+      }
+
+      .compare {
+        /* This campares between reference page and our actual webpage */
+        text-align: center;
+        margin-bottom: 30px;
+      }
+
+      .compare h1 {
+        /* It is a comparision text of reference page and our actual webpage */
+        font-size: 32px;
+        font-weight: bold;
+        color: #f2f2f2;
+      }
+
+      .compare img {
+        /* This is a comparision between reference page and our actual webpage*/
+        height: 432px;
+        width: 691px;
+        margin: 16px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.1);
+        transition: 0.3s;
+      }
+
+      .compare img:hover {
+        /* This adds the hover effect */
+        transform: scale(1.05);
+        box-shadow: 0px 8px 30px rgba(255, 255, 255, 0.3);
+      }
+
+      .c-text {
+        /* This shows the compare text between */
+        width: 60%;
+        text-align: center;
+        margin-top: 32px;
+        color: #dcdcdc;
+        position: relative;
+        left: 250px;
+      }
+
+      .c-text a {
+        /* styling the compare text */
+        font-size: 24px;
+        font-weight: bold;
+        color: #f2f2f2;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+
+      .c-text a:hover {
+        /* styling the compare text using hover effect */
+        color: rgb(242, 102, 250);
+      }
+
+      .c-text h4 {
+        /* A div called c-text -> h4 tag */
+        font-size: 18px;
+        color: #c0c0c0;
+        margin-top: 16px;
+        line-height: 1.6;
+        padding-bottom: 20px;
+      }
+
+      footer {
+        /* This shows the footer part of our website */
+        box-sizing: border-box;
+        display: flex;
+        background-color: #333333;
+        padding: 16px;
+      }
+
+      .about-logo {
+        /* This shows the logo of the webpage */
+        flex: 40%;
+        width: auto;
+      }
+
+      .about-logo p {
+        /* A div called about-logo -> p tag */
+        color: white;
+        font-size: 18px;
+      }
+
+      .about-logo h2 {
+        /* A div called about-logo -> h2 tag */
+        color: white;
+        font-size: 32px;
+      }
+
+      .quick-links {
+        /* This shows the app links we are available at */
+        flex: 25%;
+        width: 25%;
+      }
+
+      .quick-links h2 {
+        /* A div called quick-links -> h2 tag */
+        color: white;
+        font-size: 32px;
+      }
+
+      .quick-links a {
+        /* A div called quick-links -> a tag */
+        color: white;
+        text-decoration: none;
+        font-size: 24px;
+      }
+
+      .contact-us-main {
+        /* This shows our contact details */
+        flex: 25%;
+        width: 25%;
+      }
+
+      .contact-us {
+        /* This shows our contact details */
+        gap: 16px;
+        display: flex;
+      }
+
+      .contact-us img {
+        /* A div called contact-us -> img tag */
+        height: 40px;
+        width: 40px;
+      }
+
+      .contact-us p {
+        /* A div called contact-us -> p tag */
+        color: white;
+      }
+
+      .contact-us-text {
+        /* This shows the text of our contact */
+        display: block;
+      }
+
+      .location img {
+        /* A div called location -> img tag */
+        height: 40px;
+        width: 40px;
+      }
+
+      .location {
+        /* This shows our store location */
+        display: flex;
+        gap: 16px;
+      }
+
+      .location p {
+        /* A div called location -> p tag */
+        color: white;
+        margin-top: 8px;
+      }
+
+      .mail {
+        /* This shows our email address */
+        display: flex;
+        gap: 16px;
+      }
+
+      .mail img {
+        /* A div called mail -> img tag */
+        height: 40px;
+        width: 40px;
+      }
+
+      .mail-text {
+        /* This shows the text of our mail */
+        color: white;
+        margin-top: 8px;
+      }
+
+      .partners {
+        /* This shows our partners */
+        flex: 20%;
+        width: 25%;
+        display: block;
+        box-sizing: border-box;
+      }
+
+      .partners img {
+        /* A div called partners -> img tag */
+        height: 50px;
+        width: 100px;
+      }
+
+      .copy-right {
+        /* This is trademark of our website */
+        color: white;
+        text-align: center;
+        padding: 16px;
+        background-color: #1d1c1c;
+      }
+
+      .partners h2 {
+        /* A div called partners ->h2 tag */
+        color: white;
+        font-size: 32px;
+      }
+
+      .apps img {
+        /* A div called apps -> img tag */
+        height: 40px;
+        width: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!--This is a container-->
+      <div class="top-part">
+        <!--This is top part of the website-->
+        <!-- Navigation Bar -->
+        <nav>
+          <div class="navp1">
+            <!--This is left side of the nav bar-->
+            <img
+              class="menubar"
+              src="../Assets/icons/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+              alt="menu bar"
+            />
+            <input class="search-bar" type="text" placeholder="Search..." />
+          </div>
+          <h1
+            style="
+              color: white;
+              font-family: serif;
+              font-size: 32px;
+              cursor: pointer;
+            "
+          >
+            RICHARD MILLE
+          </h1>
+          <div class="nav-icons">
+            <!--This is right side of the nav bar-->
+            <a href="../home_page.html">Home</a>
+            <a href="../pages/blog_page.html">Blog</a>
+            <a href="../pages/product_page.html">Product</a>
+            <a href="../pages/research_page.html">Research</a>
+            <a href="../pages/about_us.html">About us</a>
+            <a href="../pages/login.html"
+              ><img
+                class="login_logo"
+                src="../Assets/icons/account_circle_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+                alt="login"
+            /></a>
+          </div>
+        </nav>
+
+        <div class="text">
+          <!--This is heading of the website-->
+          <h1 class="main-text">Research Page</h1>
+          <h2 class="main-text sub-text">Our Features</h2>
+        </div>
+      </div>
+
+      <div class="features" style="color: white">
+        <!--This div showcases the main features of our website-->
+        <div class="f1">
+          <img
+            style="height: 50px; width: 50px"
+            src="../Assets/icons/person_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+            alt="user"
+          />
+          <h1>User Friendly</h1>
+        </div>
+        <div class="f1">
+          <img
+            style="height: 50px; width: 50px"
+            src="../Assets/icons/brush_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+            alt="user"
+          />
+          <h1>Engaging Design</h1>
+        </div>
+        <div class="f1">
+          <!--It highlights the features-->
+          <img
+            style="height: 50px; width: 50px"
+            src="../Assets/icons/star_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+            alt="user"
+          />
+          <h1>Interactive Features</h1>
+        </div>
+      </div>
+
+      <div class="content" style="color: white">
+        <!--This div contains the content of our research page-->
+        <div class="compare">
+          <!--This div compares the reference webpage and our actual webpage-->
+          <h1 style="text-align: center; margin-bottom: 70px">Home Page</h1>
+          <img
+            style="
+              height: 300px;
+              width: 500px;
+              margin-left: 50px;
+              margin-right: 80px;
+            "
+            src="../Assets/research page images/home_ref.png"
+            alt="img1"
+          />
+          <img
+            style="height: 300px; width: 500px"
+            src="../Assets/research page images/home.png"
+            alt="img1"
+          />
+          <div class="c-text">
+            <!--This is a compare text of reference webpage and actual webpage-->
+            <a href="https://www.rolex.com/en-us"><h2>Visit Link</h2></a>
+            <h4>
+              While creating the home page of our website, we took "rolex.com"
+              as our reference page. We liked the nav bar of the reference page
+              and styled nav bar of our website with our own creativity. We also
+              liked the way this website was designed. So, we have added our own
+              ideas to it. Prouduct video is also added on our homepage taking
+              reference from rolex.
+            </h4>
+          </div>
+        </div>
+        <div class="compare">
+          <!--This part is repeated-->
+          <h1 style="text-align: center; margin-bottom: 70px">Blog Page</h1>
+          <img
+            style="
+              height: 300px;
+              width: 500px;
+              margin-left: 50px;
+              margin-right: 80px;
+            "
+            src="../Assets/research page images/blog_page_ref.png"
+            alt="img1"
+          />
+          <img
+            style="height: 300px; width: 500px"
+            src="../Assets/research page images/blog_page.png"
+            alt="img1"
+          />
+          <div class="c-text">
+            <!--This part is repeated-->
+            <a
+              href="https://dribbble.com/shots/23547729-Horizone-Blog-Page?utm_source=Clipboard_Shot&utm_campaign=aprilia_h&utm_content=Horizone%20-%20Blog%20Page&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=aprilia_h&utm_content=Horizone%20-%20Blog%20Page&utm_medium=Social_Share"
+              ><h2>Visit Link</h2></a
+            >
+            <h4>
+              We took a template from "dribbble.com" as our reference. We really
+              liked how the page was styled. Adding our own creativity, we
+              replaced the backgroud image with a backgroud video. And, added
+              our own style to the blog list.
+            </h4>
+          </div>
+        </div>
+        <div class="compare">
+          <!--This part is repeated-->
+          <h1 style="text-align: center; margin-bottom: 70px">Products Page</h1>
+          <img
+            style="
+              height: 300px;
+              width: 500px;
+              margin-left: 50px;
+              margin-right: 80px;
+            "
+            src="../Assets/research page images/products_ref.png"
+            alt="img1"
+          />
+          <img
+            style="height: 300px; width: 500px"
+            src="../Assets/research page images/products.png"
+            alt="img1"
+          />
+          <div class="c-text">
+            <!--This part is repeated-->
+            <a href="https://www.richardmille.com/collections"
+              ><h2>Visit Link</h2></a
+            >
+            <h4>
+              During the process of creation of the products page, we took the
+              reference from the Official Richard Mille's page. We liked how the
+              images of watches were placed and we changed it a bit. We added
+              the hover effect - whenever the mouse hovers over the image of the
+              watch, the view details button and heart (add to favourite) button
+              shows up.
+            </h4>
+          </div>
+        </div>
+        <div class="compare">
+          <!--This part is repeated-->
+          <h1 style="text-align: center; margin-bottom: 70px">Research Page</h1>
+          <img
+            style="
+              height: 300px;
+              width: 500px;
+              margin-left: 50px;
+              margin-right: 80px;
+            "
+            src="../Assets/research page images/research_ref.png"
+            alt="img1"
+          />
+          <img
+            style="height: 300px; width: 500px"
+            src="../Assets/research page images/research.png"
+            alt="img1"
+          />
+          <div class="c-text">
+            <!--This part is repeated-->
+            <a href="https://www.jax.org/"><h2>Visit Link</h2></a>
+            <h4>
+              During the development of our Research Page, we took the official
+              website of "The Jackson Laboratory" as our reference. We added our
+              own style and creativity to our website.
+            </h4>
+          </div>
+        </div>
+        <div class="compare">
+          <!--This part is repeated-->
+          <h1 style="text-align: center; margin-bottom: 70px">About Us Page</h1>
+          <img
+            style="
+              height: 300px;
+              width: 500px;
+              margin-left: 50px;
+              margin-right: 80px;
+            "
+            src="../Assets/research page images/about us_ref.png"
+            alt="img1"
+          />
+          <img
+            style="height: 300px; width: 500px"
+            src="../Assets/research page images/about us.png"
+            alt="img1"
+          />
+          <div class="c-text">
+            <!--This part is repeated-->
+            <a
+              href="https://dribbble.com/shots/24229183-Exce-E-commerce-About-Us-Landing-Page?utm_source=Clipboard_Shot&utm_campaign=yogapra&utm_content=Exce.%20-%20E-commerce%20About%20Us%20Landing%20Page&utm_medium=Social_Share&utm_source=Clipboard_Shot&utm_campaign=yogapra&utm_content=Exce.%20-%20E-commerce%20About%20Us%20Landing%20Page&utm_medium=Social_Share"
+              ><h2>Visit Link</h2></a
+            >
+            <h4>
+              To create about us page, a template from dribble.com was taken as
+              our reference. We added our own ideas and effects to our page
+              taking it as a reference.
+            </h4>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="about-logo">
+          <!--This shows the logo of our website-->
+          <h2>RICHARD MILLE</h2>
+          <br />
+          <p>
+            Discover the intricate craftsmanship of this luxury timepiece,
+            <br />designed with precision and elegance.
+          </p>
+        </div>
+        <div class="quick-links">
+          <!--This shows the quick links-->
+          <h2>Quick Links</h2>
+          <br />
+          <a href="../home_page.html">Home</a><br /><br />
+          <a href="../pages/blog_page.html">Blog</a><br /><br />
+          <a href="../pages/product_page.html">Product</a><br /><br />
+          <a href="pages/about_us.html">About us</a><br /><br />
+          <a href="../pages/research_page.html">Research</a><br /><br />
+        </div>
+        <div class="contact-us-main">
+          <!--This div shows our contact details-->
+          <div class="contact-us">
+            <img src="../Assets/icons/call.png" alt="call" />
+            <div class="contact-us-text">
+              <p>+01-5423201</p>
+              <p>9844563721</p>
+            </div>
+          </div>
+          <br />
+          <div class="location">
+            <!--This div shows the location of our store-->
+            <img src="../Assets/icons/location.png" alt="location" />
+            <div class="location-text">
+              <p>Kamalpokhari, Nepal</p>
+            </div>
+          </div>
+          <br />
+          <div class="mail">
+            <!--This div shows our email address -->
+            <img src="../Assets/icons/mail.png" alt="mail" />
+            <div class="mail-text">
+              <p>richardmille@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="partners">
+          <!--This div shows our partners-->
+          <h2>Follow us</h2>
+          <br />
+          <div class="apps">
+            <!--This div shows the apps we are available at-->
+            <a href="https://www.facebook.com/"
+              ><img src="../Assets/icons/facebook.png" alt="facebook"
+            /></a>
+            <a href="https://www.instagram.com/"
+              ><img src="../Assets/icons/insta.png" alt="insta"
+            /></a>
+            <a href="https://www.x.com/"
+              ><img src="../Assets/icons/twitter.png" alt="twitter"
+            /></a>
+            <a href="https://www.youtube.com/"
+              ><img src="../Assets/icons/yt.png" alt="yt"
+            /></a>
+            <a href="https://www.pinterest.com/"
+              ><img src="../Assets/icons/pin.png" alt="pin"
+            /></a>
+          </div>
+        </div>
+      </footer>
+      <div class="copy-right">RICHARD MILLE &copy; All Rights Reserved</div>
+      <!--This is  trademark of the website-->
+    </div>
+  </body>
+</html>

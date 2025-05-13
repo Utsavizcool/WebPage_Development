@@ -1,0 +1,410 @@
+<!--this is the blog post of our website-->
+<!DOCTYPE html>
+<html lang="en">
+  <!--this is head section -->
+  <head>
+    <meta name="description" content="Watch Ecommerce Website Blog Page" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, Watches, Richard Mille"
+    />
+    <!--this is name and content for auther-->
+    <meta name="author" content="Dipti Subedi, Jayant Subedi" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      What Makes Richard Mille Watches So Strong and Lightweight?
+    </title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        /*This is the main body*/
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+
+      nav {
+        /*Styling navbar*/
+        background-color: #2b2b2b;
+        height: 124px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 32px;
+      }
+
+      .navp1 {
+        /*left side of the navbar*/
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .menubar,
+      .cart_logo,
+      .contact_logo,
+      .login_logo {
+        /*Selecting multiple items at once*/
+        height: 35px;
+        width: 35px;
+        cursor: pointer;
+      }
+
+      .nav-icons {
+        /*Styling right side of the navbar*/
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .nav-icons a {
+        /*Styling anchor tag*/
+        color: white;
+        text-decoration: none;
+        font-size: 22px;
+      }
+      .nav-icons a:hover {
+        /*Adding hover effect*/
+        color: rgb(242, 102, 250);
+      }
+
+      .search-bar {
+        /*Styling searchbar*/
+        text-align: center;
+        padding: 8px 16px;
+        border: 1px solid #444444;
+        border-radius: 20px;
+        color: #ffffff;
+        font-size: 16px;
+        background-color: #1a1a1a;
+      }
+
+      .search-bar::placeholder {
+        /*Styling the placeholder*/
+        color: silver;
+      }
+
+      .container {
+        /*Main container of our page*/
+        height: fit-content;
+        width: 1075px;
+        margin: 40px;
+        position: relative;
+        left: 184px;
+      }
+
+      .blog-post {
+        /*Styling div called blog post*/
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .blog-title {
+        /*Styling title*/
+        font-weight: bold;
+        color: #2b2b2b;
+        margin-bottom: 10px;
+      }
+
+      .blog-info {
+        /*Author info and date*/
+        color: rgb(154, 152, 152);
+      }
+
+      .blog-info a {
+        color: blue;
+        text-decoration: none;
+      }
+
+      .blog-info a:hover {
+        /*Adding hover effect*/
+        text-decoration: underline;
+      }
+
+      .post-date {
+        margin-left: 10px;
+      }
+
+      .image img {
+        /*Styling images*/
+        width: 100%;
+        border-radius: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        max-height: 518px;
+        object-fit: cover;
+      }
+
+      .content {
+        /*The main content of our blog*/
+        font-size: 20px;
+        color: #5d5d5d;
+      }
+
+      footer {
+        /*Styling the footer*/
+        box-sizing: border-box;
+        display: flex;
+        background-color: #333333;
+        padding: 10px;
+      }
+      .about-logo {
+        /*Styling div called about-logo*/
+        flex: 40%;
+        width: auto;
+      }
+      .about-logo p {
+        /*div called "about-logo" -> p tag*/
+        color: white;
+        font-size: 18px;
+      }
+      .about-logo h2 {
+        /*div called "about-logo" -> h2 tag*/
+        color: white;
+        font-size: 32px;
+      }
+      .quick-links {
+        flex: 25%;
+        width: 25%;
+      }
+      .quick-links h2 {
+        color: white;
+        font-size: 32px;
+      }
+      .quick-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+      }
+      .contact-us-main {
+        flex: 25%;
+        width: 25%;
+      }
+      .contact-us {
+        gap: 16px;
+        display: flex;
+      }
+      .contact-us img {
+        height: 40px;
+        width: 40px;
+      }
+
+      .contact-us p {
+        color: white;
+      }
+      .contact-us-text {
+        display: block;
+      }
+      .location img {
+        height: 40px;
+        width: 40px;
+      }
+      .location {
+        display: flex;
+        gap: 16px;
+      }
+      .location p {
+        color: white;
+        margin-top: 8px;
+      }
+      .mail {
+        display: flex;
+        gap: 16px;
+      }
+      .mail img {
+        height: 40px;
+        width: 40px;
+      }
+      .mail-text {
+        color: white;
+        margin-top: 8px;
+      }
+      .partners {
+        flex: 20%;
+        width: 25%;
+        display: block;
+        box-sizing: border-box;
+      }
+      .partners img {
+        height: 50px;
+        width: 100px;
+      }
+      .copy-right {
+        color: white;
+        text-align: center;
+        padding: 10px;
+        background-color: #1d1c1c;
+      }
+      .partners h2 {
+        color: white;
+        font-size: 32px;
+      }
+      .apps img {
+        height: 40px;
+        width: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <!--this is div class for navp1-->
+      <div class="navp1">
+        <img
+          class="menubar"
+          src="../Assets/icons/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+          alt="menu bar"
+        />
+        <input class="search-bar" type="text" placeholder="Search..." />
+      </div>
+      <h1
+        style="
+          color: white;
+          font-family: serif;
+          font-size: 32px;
+          cursor: pointer;
+        "
+      >
+        <!--this the brand of the watch -->
+        RICHARD MILLE
+      </h1>
+      <div class="nav-icons">
+        <!--this are the links for pages like home , blog , product , research-->
+        <a href="../home_page.html">Home</a>
+        <a href="../pages/blog_page.html">Blog</a>
+        <a href="../pages/product_page.html">Product</a>
+        <a href="../pages/research_page.html">Research</a>
+        <a href="../pages/about_us.html">About us</a>
+        <a href="../pages/login.html"
+          ><img
+            class="login_logo"
+            src="../Assets/icons/account_circle_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+            alt="login"
+        /></a>
+      </div>
+    </nav>
+    <!--this is div class for container etc.-->
+    <div class="container">
+      <div class="blog-post">
+        <h1 class="blog-title">
+          “What Makes Richard Mille Watches So Strong and Lightweight?”
+        </h1>
+        <div class="blog-info">
+          <span class="post-author"
+            >By <a href="./about_us.html">Dipti Subedi</a></span
+          >
+          <span class="post-date">January 30, 2025</span>
+        </div>
+        <div class="image">
+          <img src="../Assets/background/blog2.webp" alt="Blog Post Image" />
+          <p style="text-align: center; margin-bottom: 20px">Blog 3 Image</p>
+        </div>
+
+        <div class="content">
+          <!--this is paragraph for class content-->
+          <p>
+            In this 21st century, watch making companies are growing up with
+            their new innovation of chronograph which is not only durable also
+            lightweight.In order to achieve the perfect balance, there must be
+            understanding of materials, engineering, and other technologies.
+            Materials like titanium and ceramic, which are lightweight yet
+            durable, are used to make watch which doesn't even feel heavy.<br /><br />
+            Along with titanium and ceramic, carbon fiber also plays important
+            role in making watches very light yet strong which might be little
+            expensive. Also, for watch's strength and weight, strap material is
+            also considered as another factor. Selecting a lighter strap
+            materials can further reduce overall weight of the watch.<br /><br />
+
+            Talking about our watch "Richard Mille", we have applied same
+            methodology. Materials like titanium, ceramic and carbon fibers are
+            used in order to make the lightweight balance along with the
+            material used for making straps. Where titanium makes the watch
+            ideal for sports which is highly resistant to corrosion (damage
+            materials slowly by chemicals) and strong.<br /><br />
+            Likewise, ceramic is extremely hard and scratch proof along with
+            lightweight. In the same way, carbon fiber also provides high
+            strength with minimal weight.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--this is footer-->
+    <footer>
+      <div class="about-logo">
+        <h2>RICHARD MILLE</h2>
+        <br />
+        <p>
+          Discover the intricate craftsmanship of this luxury timepiece,
+          <br />designed with precision and elegance.
+        </p>
+      </div>
+      <!--this is div class quick-links-->
+      <div class="quick-links">
+        <h2>Quick Links</h2>
+        <br />
+        <!--this are the links for pages like home , blog , product , research and about us -->
+        <a href="../home_page.html">Home</a><br /><br />
+        <a href="../pages/blog_page.html">Blog</a><br /><br />
+        <a href="../pages/product_page.html">Product</a><br /><br />
+        <a href="../pages/about_us.html">About us</a><br /><br />
+        <a href="../pages/research_page.html">Research</a><br /><br />
+      </div>
+      <div class="contact-us-main">
+        <div class="contact-us">
+          <img src="../Assets/icons/call.png" alt="call" />
+          <div class="contact-us-text">
+            <p>+01-5423201</p>
+            <p>9844563721</p>
+          </div>
+        </div>
+        <br />
+        <!--this is div class for location-->
+        <div class="location">
+          <img src="../Assets/icons/location.png" alt="location" />
+          <div class="location-text">
+            <p>Kamalpokhari, Nepal</p>
+          </div>
+        </div>
+        <br />
+        <div class="mail">
+          <img src="../Assets/icons/mail.png" alt="mail" />
+          <div class="mail-text">
+            <p>richardmille@gmail.com</p>
+          </div>
+        </div>
+      </div>
+      <!--this is div class for partners-->
+      <div class="partners">
+        <h2>Follow us</h2>
+        <br />
+        <!--this are the links for facebook , instagram , x , youtube and pinterest-->
+        <div class="apps">
+          <a href="https://www.facebook.com/"
+            ><img src="../Assets/icons/facebook.png" alt="facebook"
+          /></a>
+          <a href="https://www.instagram.com/"
+            ><img src="../Assets/icons/insta.png" alt="insta"
+          /></a>
+          <a href="https://www.x.com/"
+            ><img src="../Assets/icons/twitter.png" alt="twitter"
+          /></a>
+          <a href="https://www.youtube.com/"
+            ><img src="../Assets/icons/yt.png" alt="yt"
+          /></a>
+          <a href="https://www.pinterest.com/"
+            ><img src="../Assets/icons/pin.png" alt="pin"
+          /></a>
+        </div>
+      </div>
+    </footer>
+    <!--this is footer-->
+    <div class="copy-right">RICHARD MILLE &copy; All Rights Reserved</div>
+  </body>
+</html>

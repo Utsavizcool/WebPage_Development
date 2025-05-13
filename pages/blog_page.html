@@ -1,0 +1,535 @@
+<!--this is blog page of our website-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="description" content="Watch Ecommerce Website Blog Page" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, Watches, Richard Mille"
+    />
+    <meta name="author" content="Jayant Subedi" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Richard Mille - Blog Page</title>
+    <style>
+      /*Interval css*/
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        /*This is the main body*/
+        overflow-x: hidden;
+        scrollbar-width: none;
+      }
+
+      body {
+        height: fit-content;
+      }
+
+      .container {
+        /*Main container of our page*/
+        height: fit-content;
+        width: 100%;
+      }
+
+      .top-part {
+        /*top part of our website*/
+        height: 490px;
+        width: 100%;
+      }
+
+      .background-video {
+        /*the background video of our website*/
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1;
+      }
+
+      nav {
+        /*Styling navbar*/
+        background-color: #2b2b2b;
+        height: 110px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 32px;
+      }
+
+      .navp1 {
+        /*left side of the navbar*/
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .menubar,
+      .cart_logo,
+      .contact_logo,
+      .login_logo {
+        /*Selecting multiple items at once*/
+        height: 35px;
+        width: 35px;
+        cursor: pointer;
+      }
+
+      .nav-icons {
+        /*Styling right side of the navbar*/
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      .nav-icons a {
+        /*Styling anchor tag*/
+        color: white;
+        text-decoration: none;
+        font-size: 22px;
+      }
+      .nav-icons a:hover {
+        /*Adding hover effect*/
+        color: rgb(242, 102, 250);
+      }
+
+      .search-bar {
+        /*Styling searchbar*/
+        text-align: center;
+        padding: 8px 16px;
+        border: 1px solid #444444;
+        border-radius: 20px;
+        color: #ffffff;
+        font-size: 16px;
+        background-color: #1a1a1a;
+      }
+
+      .search-bar::placeholder {
+        /*Styling the placeholder*/
+        color: silver;
+      }
+
+      .text {
+        color: white;
+        font-size: 32px;
+        position: relative;
+        top: 150px;
+        left: 32px;
+      }
+
+      .main-text {
+        font-weight: bold;
+      }
+
+      .sub-text {
+        margin-top: 20px;
+        font-size: 24px;
+      }
+
+      .bottom-part {
+        height: 1500px;
+        width: 100%;
+        background-color: black;
+        font-size: 18px;
+      }
+
+      .bottom-part h1 {
+        position: relative;
+        top: 24px;
+        left: 32px;
+        color: white;
+      }
+
+      .bottom-part p {
+        position: relative;
+        top: 24px;
+        left: 32px;
+        color: white;
+        font-size: 18px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+
+      #blog-select {
+        cursor: pointer;
+        transition: ease-in 0.3s;
+      }
+
+      .blog-list {
+        background-color: #2b2b2b;
+        height: 60%;
+        width: 80%;
+        position: relative;
+        top: 7%;
+        left: 10%;
+      }
+
+      .blog-list p a {
+        color: rgb(50, 50, 255);
+        text-decoration: none;
+      }
+
+      .blog-list p a:hover {
+        text-decoration: underline;
+      }
+
+      footer {
+        /*Styling the footer*/
+        box-sizing: border-box;
+        display: flex;
+        background-color: #333333;
+        padding: 10px;
+      }
+
+      .about-logo {
+        /*Styling div called about-logo*/
+        flex: 40%;
+        width: auto;
+      }
+
+      .about-logo p {
+        /*div called "about-logo" -> p tag*/
+        color: white;
+        font-size: 18px;
+      }
+
+      .about-logo h2 {
+        /*div called "about-logo" -> h2 tag*/
+        color: white;
+        font-size: 32px;
+      }
+
+      .quick-links {
+        flex: 25%;
+        width: 25%;
+      }
+
+      .quick-links h2 {
+        color: white;
+        font-size: 32px;
+      }
+
+      .quick-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      .contact-us-main {
+        flex: 25%;
+        width: 25%;
+      }
+
+      .contact-us {
+        gap: 16px;
+        display: flex;
+      }
+
+      .contact-us img {
+        height: 40px;
+        width: 40px;
+      }
+
+      .contact-us p {
+        color: white;
+      }
+
+      .contact-us-text {
+        display: block;
+      }
+
+      .location img {
+        height: 40px;
+        width: 40px;
+      }
+
+      .location {
+        display: flex;
+        gap: 16px;
+      }
+
+      .location p {
+        color: white;
+        margin-top: 8px;
+      }
+
+      .mail {
+        display: flex;
+        gap: 16px;
+      }
+
+      .mail img {
+        height: 40px;
+        width: 40px;
+      }
+
+      .mail-text {
+        color: white;
+        margin-top: 8px;
+      }
+
+      .partners {
+        flex: 20%;
+        width: 25%;
+        display: block;
+        box-sizing: border-box;
+      }
+
+      .partners img {
+        height: 50px;
+        width: 100px;
+      }
+
+      .copy-right {
+        color: white;
+        text-align: center;
+        padding: 10px;
+        background-color: #1d1c1c;
+      }
+
+      .partners h2 {
+        color: white;
+        font-size: 32px;
+      }
+
+      .apps img {
+        height: 40px;
+        width: 40px;
+      }
+      .active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        background-color: #2b2b2b;
+        height: 50px;
+        width: 70px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Top Section with Video Background -->
+      <div class="top-part">
+        <video class="background-video" autoplay loop muted>
+          <source
+            src="../Assets/background/Richard Mille  A racing machine on the wrist.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <!-- Navigation Bar -->
+        <nav>
+          <div class="navp1">
+            <img
+              class="menubar"
+              src="../Assets/icons/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+              alt="menu bar"
+            />
+            <input class="search-bar" type="text" placeholder="Search..." />
+          </div>
+          <h1
+            style="
+              color: white;
+              font-family: serif;
+              font-size: 32px;
+              cursor: pointer;
+            "
+          >
+            RICHARD MILLE
+            <!--this is class-->
+          </h1>
+          <div class="nav-icons">
+            <a href="../home_page.html">Home</a>
+            <a href="../pages/blog_page.html">Blog</a>
+            <a href="../pages/product_page.html">Product</a>
+            <a href="../pages/research_page.html">Research</a>
+            <a href="../pages/about_us.html">About us</a>
+            <a href="../pages/login.html"
+              ><img
+                class="login_logo"
+                src="../Assets/icons/account_circle_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+                alt="login"
+            /></a>
+          </div>
+        </nav>
+        <!--this is div class for text-->
+        <div class="text">
+          <h1 class="main-text">Richard Mille</h1>
+          <h2 class="sub-text">The Official Blog Page</h2>
+        </div>
+      </div>
+
+      <!-- Blog Content Section -->
+      <div class="bottom-part">
+        <h1 class="blog-title">Blog</h1>
+        <p class="blog-description">
+          Welcome to our blog, <br />
+          where we dive into the captivating world of timepieces. <br />
+          Discover stories, insights, and craftsmanship behind the most iconic
+          watches, <br />
+          from timeless classics to cutting-edge innovations. <br />
+          Here, every second tells a story.
+        </p>
+
+        <div
+          id="blog-select"
+          style="display: flex; gap: 50px; align-items: center"
+        >
+          <p id="1" class="active" onclick="handleClick(id)">All</p>
+          <p id="2" onclick="handleClick(id)">History</p>
+          <p id="3" onclick="handleClick(id)">Tech</p>
+        </div>
+        <!--this is another blog list-->
+        <div class="blog-list">
+          <div
+            class="blog"
+            style="height: fit-content; width: 80%; margin-top: 20px"
+          >
+            <h1>
+              “Impact of technology on the watch industry and consumer trends”
+            </h1>
+            <p>
+              Technology has deeply transformed the watch industry by changing
+              the customer preferences and making the changes to watches the way
+              they are designed and marketed...
+              <a href="./blog_post_1.html">Read More</a>
+            </p>
+          </div>
+          <div
+            class="blog"
+            style="height: fit-content; width: 80%; margin-top: 20px"
+          >
+            <h1>
+              <!--this is header h1-->
+              "Topics that integrate technological <br />
+              advancements with watch design and sales"
+            </h1>
+            <p>
+              The integration of technological advancements with watch design
+              and sales has transformed the watch industry in recent years .
+              here are the topics that show how technological advancements is
+              changing both. Design and sales of watches...
+              <a href="../pages/blog_post_2.html">Read More</a>
+              <!--above content is our paragraph section-->
+            </p>
+          </div>
+          <div
+            class="blog"
+            style="height: fit-content; width: 80%; margin-top: 20px"
+          >
+            <h1>
+              <!--this is header h1-->
+              "What Makes Richard Mille Watches So Strong and Lightweight?" <br />
+            </h1>
+            <p>
+              In this 21st century, watch making companies are growing up with their new innovation of chronograph which is not only durable also lightweight.In order to achieve the perfect balance, there must be understanding of materials, engineering,...
+              <a href="../pages/blog_post_3.html">Read More</a>
+              <!--above content is our paragraph section-->
+            </p>
+          </div>
+          <div
+            class="blog"
+            style="height: fit-content; width: 80%; margin-top: 20px"
+          >
+            <h1>
+              <!--this is header h1-->
+              "Is Technology Taking Away the Traditional Watchmaking Art?" <br />
+            </h1>
+            <p>
+              In this 21st century, watch making companies are growing up with their new innovation of chronograph which is not only durable also lightweight....
+              <a href="../pages/blog_post_4.html">Read More</a>
+              <!--above content is our paragraph section-->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--this is footer-->
+    <footer>
+      <div class="about-logo">
+        <h2>RICHARD MILLE</h2>
+        <br />
+        <p>
+          Discover the intricate craftsmanship of this luxury timepiece,
+          <br />designed with precision and elegance.
+        </p>
+      </div>
+      <!--this is div class quick-links-->
+      <div class="quick-links">
+        <h2>Quick Links</h2>
+        <br />
+        <a href="../home_page.html">Home</a><br /><br />
+        <a href="../pages/blog_page.html">Blog</a><br /><br />
+        <a href="../pages/product_page.html">Product</a><br /><br />
+        <a href="../pages/about_us.html">About us</a><br /><br />
+        <a href="../pages/research_page.html">Research</a><br /><br />
+      </div>
+      <!--this is a div class of contact us main-->
+      <div class="contact-us-main">
+        <div class="contact-us">
+          <img src="../Assets/icons/call.png" alt="call" />
+          <div class="contact-us-text">
+            <p>+01-5423201</p>
+            <p>9844563721</p>
+          </div>
+        </div>
+        <br />
+        <!--this is location-->
+        <div class="location">
+          <img src="../Assets/icons/location.png" alt="location" />
+          <div class="location-text">
+            <p>Kamalpokhari, Nepal</p>
+          </div>
+        </div>
+        <br />
+        <div class="mail">
+          <img src="../Assets/icons/mail.png" alt="mail" />
+          <div class="mail-text">
+            <p>richardmille@gmail.com</p>
+          </div>
+        </div>
+      </div>
+      <!--this is div for partners-->
+      <div class="partners">
+        <h2>Follow us</h2>
+        <br />
+        <div class="apps">
+          <a href="https://www.facebook.com/"
+            ><img src="../Assets/icons/facebook.png" alt="facebook"
+          /></a>
+          <a href="https://www.instagram.com/"
+            ><img src="../Assets/icons/insta.png" alt="insta"
+          /></a>
+          <a href="https://www.x.com/"
+            ><img src="../Assets/icons/twitter.png" alt="twitter"
+          /></a>
+          <a href="https://www.youtube.com/"
+            ><img src="../Assets/icons/yt.png" alt="yt"
+          /></a>
+          <a href="https://www.pinterest.com/"
+            ><img src="../Assets/icons/pin.png" alt="pin"
+          /></a>
+        </div>
+      </div>
+    </footer>
+    <div class="copy-right">RICHARD MILLE &copy; All Rights Reserved</div>
+    <!--this is function handleclick-->
+    <script>
+      function handleClick(id) {
+        // Find all elements with class "active"
+        const activeElement = document.querySelector(".active");
+        if (activeElement) {
+          activeElement.classList.remove("active");
+        }
+        // Add "active" class to the clicked element
+        document.getElementById(id).classList.add("active");
+      }
+    </script>
+  </body>
+</html>

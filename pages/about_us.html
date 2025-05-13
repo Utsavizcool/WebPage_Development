@@ -1,0 +1,662 @@
+<!--this is about us page -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="description" content="Watch Ecommerce Website Blog Page" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, Watches, Richard Mille"
+    />
+    <!--the below information is about author-->
+    <meta name="author" content="Bibek Kumar Sah" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us Page</title>
+    <style>
+      * {
+        /*Universal Selector*/
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        scrollbar-width: none;
+      }
+      body {
+        background-color: black;
+      }
+      .about .image {
+        text-align: center;
+        color: red;
+      }
+      /*this is css */
+      .about-section {
+        padding: 50px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .about-grid {
+        display: flex;
+        gap: 150px;
+        align-items: center;
+        margin-bottom: 40px;
+      }
+
+      .about-image {
+        width: 100%;
+        height: 400px;
+        border-radius: 8px;
+      }
+      /*this is content and fontsize*/
+      .about-content h2 {
+        font-size: 35px;
+        margin-bottom: 15px;
+        color: white;
+      }
+
+      .about-content p {
+        line-height: 1.8;
+        color: white;
+      }
+
+      .team-section {
+        padding: 20px;
+        text-align: center;
+      }
+      /*this is section and font size*/
+      .team-section h2 {
+        font-size: 35px;
+        margin-bottom: 30px;
+        color: white;
+      }
+
+      .team-grid {
+        max-width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        gap: 70px;
+        flex-wrap: wrap;
+      }
+
+      .team-member {
+        text-align: center;
+        flex: 1;
+        max-width: 250px;
+      }
+      /*there is team member image width height border  margin and object*/
+      .team-member img {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        object-fit: cover;
+      }
+
+      .team-member h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+        color: white;
+      }
+
+      .team-member p {
+        color: white;
+        margin-bottom: 10px;
+      }
+
+      .team-member button:hover {
+        color: gold;
+        transition: 1s;
+        cursor: pointer;
+        background-color: black;
+      }
+      /*this is background colour height width etc*/
+      nav {
+        background-color: #2b2b2b;
+        height: 129.6px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 32px;
+      }
+
+      .navp1 {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+      /*this is menubar cart_logo contact_logo login_logo etc*/
+      .menubar,
+      .cart_logo,
+      .contact_logo,
+      .login_logo {
+        height: 35px;
+        width: 35px;
+        cursor: pointer;
+      }
+
+      .nav-icons {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .nav-icons a {
+        color: white;
+        text-decoration: none;
+        font-size: 24px;
+      }
+
+      .nav-icons a:hover {
+        color: rgb(242, 102, 250);
+      }
+
+      .search-bar {
+        text-align: center;
+        padding: 8px 16px;
+        border: 1px solid #444444;
+        border-radius: 20px;
+        color: #ffffff;
+        font-size: 16px;
+        background-color: #1a1a1a;
+      }
+      /*the below are search bar and colour of page*/
+      .search-bar::placeholder {
+        color: silver;
+      }
+
+      footer {
+        box-sizing: border-box;
+        display: flex;
+        background-color: #333333;
+        padding: 10px;
+      }
+
+      .about-logo {
+        flex: 40%;
+        width: auto;
+      }
+
+      .about-logo p {
+        color: white;
+        font-size: 18px;
+      }
+      /*the below are logo colour and font size*/
+
+      .about-logo h2 {
+        color: white;
+        font-size: 36px;
+      }
+
+      .quick-links {
+        flex: 25%;
+        width: 25%;
+      }
+
+      .quick-links h2 {
+        color: white;
+        font-size: 36px;
+      }
+
+      .quick-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      .contact-us-main {
+        flex: 25%;
+        width: 25%;
+      }
+
+      .contact-us {
+        gap: 16px;
+        display: flex;
+      }
+
+      .contact-us img {
+        height: 40px;
+        width: 40px;
+      }
+      /*the below information are contact us and colour*/
+      .contact-us p {
+        color: white;
+      }
+
+      .contact-us-text {
+        display: block;
+      }
+
+      .location img {
+        height: 40px;
+        width: 40px;
+      }
+
+      .location {
+        display: flex;
+        gap: 16px;
+      }
+
+      .location p {
+        color: white;
+        margin-top: 8px;
+      }
+
+      .mail {
+        display: flex;
+        gap: 16px;
+      }
+
+      .mail img {
+        height: 40px;
+        width: 40px;
+      }
+      /*the below are mail, colour and margin-top*/
+
+      .mail-text {
+        color: white;
+        margin-top: 8px;
+      }
+
+      .partners {
+        flex: 20%;
+        width: 25%;
+        display: block;
+        box-sizing: border-box;
+      }
+
+      .partners img {
+        height: 50px;
+        width: 100px;
+      }
+
+      .copy-right {
+        color: white;
+        text-align: center;
+        padding: 10px;
+        background-color: #1d1c1c;
+      }
+
+      .partners h2 {
+        color: white;
+        font-size: 36px;
+      }
+
+      .apps img {
+        height: 40px;
+        width: 40px;
+      }
+      /*the below are  height, width, background-colour, border, colour*/
+      .team-member button {
+        height: 38px;
+        width: 100px;
+        background-color: black;
+        border: 1px solid white;
+        color: white;
+      }
+      .formm form label::placeholder {
+        color: white;
+      }
+      .sub-btn {
+        height: 38px;
+        width: 100px;
+        background-color: black;
+        border: 1px solid white;
+        color: white;
+        position: relative;
+        left: 85px;
+      }
+      .sub-btn:hover {
+        color: gold;
+        transition: 1s;
+        cursor: pointer;
+        background-color: black;
+      }
+      .team-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 16px;
+      }
+
+      /* Styling for the product title */
+      #member-name {
+        color: white;
+        font-size: 32px;
+        font-weight: bold;
+      }
+
+      /* Styling for the close button */
+      .close-btn {
+        background-color: #b98f7d;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 8px 16px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+      .close-btn:hover {
+        background-color: #9f7b6c;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <!--this is div class of navp1-->
+      <div class="navp1">
+        <img
+          class="menubar"
+          src="../Assets/icons/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+          alt="menu bar"
+        />
+        <input class="search-bar" type="text" placeholder="Search..." />
+      </div>
+      <h1
+        style="
+          color: white;
+          font-family: serif;
+          font-size: 32px;
+          cursor: pointer;
+        "
+      >
+        <!--this is the brand name -->
+        RICHARD MILLE
+      </h1>
+      <div class="nav-icons">
+        <a href="../home_page.html">Home</a>
+        <a href="../pages/blog_page.html">Blog</a>
+        <a href="../pages/product_page.html">Product</a>
+        <a href="../pages/research_page.html">Research</a>
+        <a href="../pages/about_us.html">About us</a>
+        <a href="../pages/login.html"
+          ><img
+            class="login_logo"
+            src="../Assets/icons/account_circle_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+            alt="login"
+        /></a>
+      </div>
+    </nav>
+    <div class="about">
+      <div class="image">
+        <br /><br />
+        <h1 style="color: white">About Us</h1>
+      </div>
+    </div>
+    <!--this is sectioon class for about section and dic class for about  grid-->
+    <section class="about-section">
+      <div class="about-grid">
+        <img
+          src="../Assets/background/blog1.webp"
+          alt="img1"
+          class="about-image"
+        />
+        <div class="about-content">
+          <h2>Welcome To Our Website</h2>
+          <p>
+            In 2001, the world of watchmaking made the discovery of a new brand.
+          </p>
+          <p>
+            The first Richard Mille timepiece is introduced, the RM 001
+            Tourbillon, in an initial series of 17 watches. This is followed by
+            the tourbillon RM 002, an evolution of the RM 001, enhanced with two
+            features making their world debut: a movement baseplate in titanium,
+            and a function indicator with winding, neutral and hand-setting
+            positions.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div
+      id="hidden"
+      style="
+        height: 600px;
+        width: 900px;
+        background-color: #1e1e1e;
+        position: fixed;
+        top: 100px;
+        left: 330px;
+        display: none;
+        z-index: -1;
+        border-radius: 10px;
+        padding: 32px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+      "
+    >
+      <div class="team-header">
+        <!--name of the name goes here through js-->
+        <h1 id="member-name">Name</h1>
+        <button class="close-btn" onclick="closeDetails()">Close</button>
+      </div>
+
+      <div>
+        <img
+        id="prof-pic"
+          style="
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            object-fit: cover;
+            position: relative;
+            left: 300px;
+          "
+          src="../Assets/profiles/bibek.jpg"
+          alt="img"
+        />
+      </div>
+
+      <div class="personal-info" style="color: white">
+        <h1 style="margin-bottom: 10px">Programming-Languages</h1>
+        <p style="margin-bottom: 10px">Python, Java, C++</p>
+        <h1 style="margin-bottom: 10px">Hobbies</h1>
+        <p style="margin-bottom: 10px">Gaming, Coding</p>
+        <h1 style="margin-bottom: 10px">Projects</h1>
+        <p style="margin-bottom: 10px">E-commerce Website</p>
+        <h1 style="margin-bottom: 10px">Contact</h1>
+        <p style="margin-bottom: 10px">richardmille@gmail.com</p>
+        <p style="margin-bottom: 10px">+977-9863xxxxxx</p>
+      </div>
+    </div>
+
+    <!--this is section class for team section-->
+    <div class="team-section">
+      <h2>Our Team Member</h2>
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="../Assets/profiles/bibek.jpg" alt="img" />
+          <h3>Bibek Kumar Sah</h3>
+          <p>Student</p>
+          <p>Age : 19</p>
+          <p>Educational Qualification: BSc (Hons) Computing</p>
+          <p>Skills : HTML, CSS, JavaScript, Java, Python, SQL</p>
+          <button id="1" onclick="handleDetails(id)">Read More</button>
+        </div>
+        <div class="team-member">
+          <img src="../Assets/profiles/prasun.jpg" alt="img" />
+          <!--this is header section-->
+          <h3>Prasun Shrestha</h3>
+          <p>Student</p>
+          <p>Age : 19</p>
+          <p>Educational Qualification: BSc (Hons) Computing</p>
+          <p>Skills : HTML, CSS, JavaScript, MERN Stack, Tailwind CSS</p>
+          <button id="2" onclick="handleDetails(id)">Read More</button>
+        </div>
+        <div class="team-member">
+          <img src="../Assets/profiles/aarav.jpg" alt="img" />
+          <h3>Aarav Bhattarai</h3>
+          <p>Student</p>
+          <p>Age : 19</p>
+          <p>Educational Qualification: BSc (Hons) Computing</p>
+          <p>
+            Skills : HTML, CSS, JavaScript, Tailwind CSS, Figma, Bootstrap CSS
+          </p>
+          <button id="3" onclick="handleDetails(id)">Read More</button>
+        </div>
+        <div class="team-member">
+          <img src="../Assets/profiles/dipti.jpg" alt="img" />
+          <!--this the name of ours members-->
+          <h3>Dipti Subedi</h3>
+          <p>Student</p>
+          <p>Age : 19</p>
+          <p>Educational Qualification: BSc (Hons) Computing</p>
+          <p>Skills : HTML, CSS, JavaScript, Java, Python, SQL</p>
+          <button id="4" onclick="handleDetails(id)">Read More</button>
+        </div>
+        <div class="team-member">
+          <img src="../Assets/profiles/jayanta.jpg" alt="img" />
+          <h3>Jayanta Subedi</h3>
+          <p>Student</p>
+          <p>Age : 19</p>
+          <p>Educational Qualification: BSc (Hons) Computing</p>
+          <p>Skills : HTML, CSS, JavaScript, Java, Python, SQL, Figma</p>
+          <button id="5" onclick="handleDetails(id)">Read More</button>
+        </div>
+      </div>
+    </div>
+    <br /><br />
+    <!--this is div class for form color form etc.-->
+    <div class="form">
+      <h1 style="color: white; text-align: center">Give Your Feedback!</h1>
+      <br /><br />
+      <div class="formm" style="display: flex; justify-content: center">
+        <form style="color: white" onsubmit="handleSubmit()">
+          <label style="color: white">Your Message:</label><br /><br />
+          <input
+            id="message"
+            placeholder="Type Your Message Here"
+            type="text"
+            style="
+              height: 100px;
+              width: 300px;
+              background-color: black;
+              border: 1px solid white;
+              color: white;
+            "
+          />
+          <br /><br />
+          <input class="sub-btn" type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
+    <br /><br />
+    <footer>
+      <div class="about-logo">
+        <h2>RICHARD MILLE</h2>
+        <br />
+        <p>
+          Discover the intricate craftsmanship of this luxury timepiece,
+          <br />designed with precision and elegance.
+        </p>
+      </div>
+      <div class="quick-links">
+        <h2>Quick Links</h2>
+        <br />
+        <a href="../home_page.html">Home</a><br /><br />
+        <a href="../pages/blog_page.html">Blog</a><br /><br />
+        <a href="../pages/product_page.html">Product</a><br /><br />
+        <a href="pages/about_us.html">About us</a><br /><br />
+        <a href="../pages/research_page.html">Research</a><br /><br />
+      </div>
+      <!--this is div class for contact us main -->
+      <div class="contact-us-main">
+        <div class="contact-us">
+          <img src="../Assets/icons/call.png" alt="call" />
+          <div class="contact-us-text">
+            <p>+01-5423201</p>
+            <p>9844563721</p>
+          </div>
+        </div>
+        <br />
+        <div class="location">
+          <img src="../Assets/icons/location.png" alt="location" />
+          <div class="location-text">
+            <p>Kamalpokhari, Nepal</p>
+          </div>
+        </div>
+        <br />
+        <div class="mail">
+          <img src="../Assets/icons/mail.png" alt="mail" />
+          <div class="mail-text">
+            <p>richardmille@gmail.com</p>
+          </div>
+        </div>
+      </div>
+      <!--this is div class for partners-->
+      <div class="partners">
+        <h2>Follow us</h2>
+        <br />
+        <div class="apps">
+          <!--this are the links of social media handels-->
+          <a href="https://www.facebook.com/"
+            ><img src="../Assets/icons/facebook.png" alt="facebook"
+          /></a>
+          <a href="https://www.instagram.com/"
+            ><img src="../Assets/icons/insta.png" alt="insta"
+          /></a>
+          <a href="https://www.x.com/"
+            ><img src="../Assets/icons/twitter.png" alt="twitter"
+          /></a>
+          <a href="https://www.youtube.com/"
+            ><img src="../Assets/icons/yt.png" alt="yt"
+          /></a>
+          <a href="https://www.pinterest.com/"
+            ><img src="../Assets/icons/pin.png" alt="pin"
+          /></a>
+        </div>
+      </div>
+      <!--this is footer section-->
+    </footer>
+
+    <script>
+      function handleSubmit() {
+        const message = document.getElementById("message").value;
+
+        if (message == "") {
+          alert("Feild is empty!!");
+        } else {
+          alert("Message Submitted!!");
+        }
+      }
+
+      function handleDetails(id) {
+        if(id==1){
+          document.getElementById("hidden").style.display = "block";
+          document.getElementById("hidden").style.zIndex = 1;  
+          document.getElementById("member-name").innerText = "Bibek Kumar Shah";
+          document.getElementById("prof-pic").src = "../Assets/profiles/bibek.jpg"
+        }
+        else if(id==2){
+          document.getElementById("hidden").style.display = "block";
+          document.getElementById("hidden").style.zIndex = 1;  
+          document.getElementById("member-name").innerText = "Prasun Shrestha";
+          document.getElementById("prof-pic").src = "../Assets/profiles/prasun.jpg"
+        }
+        else if(id==3){
+          document.getElementById("hidden").style.display = "block";
+          document.getElementById("hidden").style.zIndex = 1;  
+          document.getElementById("member-name").innerText = "Aarav Bhattarai";
+          document.getElementById("prof-pic").src = "../Assets/profiles/aarav.jpg"
+        }
+        else if(id==4){
+          document.getElementById("hidden").style.display = "block";
+          document.getElementById("hidden").style.zIndex = 1;  
+          document.getElementById("member-name").innerText = "Dipti Subedi";
+          document.getElementById("prof-pic").src = "../Assets/profiles/dipti.jpg"
+        }
+        else{
+          document.getElementById("hidden").style.display = "block";
+          document.getElementById("hidden").style.zIndex = 1;  
+          document.getElementById("member-name").innerText = "Jayanta Subedi";
+          document.getElementById("prof-pic").src = "../Assets/profiles/jayanta.jpg"
+        }
+      }
+
+      function closeDetails() {
+        document.getElementById("hidden").style.display = "none";
+        document.getElementById("hidden").style.zIndex = -1;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,289 @@
+<!--This is the product page of our website-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="description" content="Watch Ecommerce Website Products Page" />
+    <meta
+      name="keywords"
+      content="HTML, CSS, JavaScript, Watches, Richard Mille"
+    />
+    <meta name="author" content="Prasun Shrestha" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Richard Mille - Product Page</title>
+    <link rel="stylesheet" href="../Css/product_page_style.css" /> <!--external css-->
+  </head>
+  <body>
+    <div class="container"> <!--This is the main container of website-->
+      <div class="top-part"> <!--This is the top part-->
+        <nav>
+          <div class="navp1"> <!--this is the left side of the navbar-->
+            <img
+              class="menubar"
+              src="../Assets/icons/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+              alt="menu bar"
+            />
+            <input id="search-bar" class="search-bar" type="text" placeholder="Search..." />
+          </div>
+          <h1
+            style="
+              color: white;
+              font-family: serif;
+              font-size: 32px;
+              cursor: pointer;
+              position: relative;
+              left: 70px;
+            "
+          >
+            RICHARD MILLE
+          </h1>
+          <div class="nav-icons"> <!--right side of the navbar containing all the icons-->
+            <a href="../home_page.html">Home</a>
+            <a href="../pages/blog_page.html">Blog</a>
+            <a href="../pages/product_page.html">Product</a>
+            <a href="../pages/research_page.html">Research</a>
+            <a href="../pages/about_us.html">About us</a>
+            <div class="nav-icons">
+              <img
+                class="cart_logo"
+                src="../Assets/icons/shopping_cart_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+                alt="cart"
+              />
+            <a href="../pages/login.html"
+              ><img
+                class="login_logo"
+                src="../Assets/icons/account_circle_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+                alt="login"
+            /></a>
+          </div>
+        </nav>
+        <div class="text"> <!--hero text of the website-->
+          <h1 class="main-text">Richard Mille</h1>
+          <h2 class="sub-text">Explore the epitome of luxury and precision.</h2>
+          <button class="view-collection" onclick="handleScroll()">
+            View Collection
+          </button>
+        </div>
+      </div>
+      <div class="bottom-part"> <!--bottom part starts from here-->
+        <div class="sorting"> <!--div to select the order of price i.e. low to high/high to low-->
+          <label>Sort By:</label>
+          <select name="SortBy" class="custom-select">
+            <option value="Featured">Featured</option>
+            <option value="low">Price low to high</option>
+            <option value="high">Price high to low</option>
+          </select>
+        </div>
+        <h2>Richard Mille Watches</h2>
+        <div id="product-details"> <!--product details div-->
+          <div class="product-header"> <!--name of the product goes here through js-->
+            <h1 id="product-title">Text</h1>
+            <button class="close-btn" onclick="closeDetails()">Close</button>
+          </div>
+          <div class="product-content"> <!--product image and info-->
+            <img
+              id="product-image"
+              src="../Assets/watchlist/w1.avif"
+              alt="Product Image"
+            />
+            <div class="product-info"> <!--product info starts here-->
+              <p id="product-description">
+                Discover the intricate craftsmanship of this luxury timepiece,
+                designed with precision and elegance.
+              </p>
+              <div class="product-pricing">
+                <span id="original-price" class="strike-through">$10,000</span>
+                <span id="discounted-price">$8,500</span>
+              </div>
+              <button class="add-to-cart-btn" onclick="addToCart()">
+                Add to Cart
+              </button>
+              <h1 style="margin-top: 20px;">Customer Reviews</h1> <!--customer reviews-->
+              <div class="product-rating">
+                ★★★★☆ 
+                <span>(4/5)</span>
+                <span>"I found it really good!" - Ramesh Shahi</span>
+              </div>
+              <div class="product-rating">
+                ★★★★★ 
+                <span>(5/5)</span>
+                <span>"It's a perfect watch!" - Vikramaditya Rana</span>
+              </div>
+              <div class="product-rating">
+                ★★★★☆
+                <span>(4/5)</span>
+                <span>"The best Luxury Watch that I have ever seen in my whole life!" - Vikramaditya Rana</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="watchlist">
+          <div class="watch-container"> <!--this contains the list of all our six watches-->
+            <div class="watch-image"> <!--watch image goes here-->
+              <img src="../Assets/watchlist/w1.avif" alt="watch1" />
+              <h1 style="color: white">Datejust 36</h1>
+              <div class="hidden-objects"> <!--some details are hidden here and will appear only when mouse is hovered over the img-->
+                <img
+                  src="../Assets/icons/favorite_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+                  alt="like"
+                />
+                <button id="1" onclick="handleClick(id)">View Details</button>
+              </div>
+            </div>
+            <div class="watch-image">
+              <img src="../Assets/watchlist/w2.avif" alt="watch2" />
+              <h1 style="color: white">Submariner</h1>
+              <div class="hidden-objects">
+                <img
+                  src="../Assets/icons/favorite_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+                  alt="like"
+                />
+                <button id="2" onclick="handleClick(id)">View Details</button>
+              </div>
+            </div>
+            <div class="watch-image">
+              <img src="../Assets/watchlist/w3.avif" alt="watch3" />
+              <h1 style="color: white">Sea-Dweller</h1>
+              <div class="hidden-objects">
+                <img
+                  src="../Assets/icons/favorite_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+                  alt="like"
+                />
+                <button id="3" onclick="handleClick(id)">View Details</button>
+              </div>
+            </div>
+            <div class="watch-image">
+              <img src="../Assets/watchlist/w4.avif" alt="watch4" />
+              <h1 style="color: white">Day-Date 36</h1>
+              <div class="hidden-objects">
+                <img
+                  src="../Assets/icons/favorite_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+                  alt="like"
+                />
+                <button id="4" onclick="handleClick(id)">View Details</button>
+              </div>
+            </div>
+            <div class="watch-image">
+              <img src="../Assets/watchlist/w5.avif" alt="watch5" />
+              <h1 style="color: white">Explorer 36</h1>
+              <div class="hidden-objects">
+                <img
+                  src="../Assets/icons/favorite_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+                  alt="like"
+                />
+                <button id="5" onclick="handleClick(id)">View Details</button>
+              </div>
+            </div>
+            <div class="watch-image">
+              <img src="../Assets/watchlist/w6.avif" alt="watch6" />
+              <h1 style="color: white">Classic 1908</h1>
+              <div class="hidden-objects">
+                <img
+                  src="../Assets/icons/favorite_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
+                  alt="like"
+                />
+                <button id="6" onclick="handleClick(id)">View Details</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background-color: black; height: 100px; width: 100%;">
+        <h1 style="text-align: center; color: white;">Hear From Our Customers</h1> <!--Reviews from our customers-->
+      </div>
+
+      <div class="reviews" style="background-color: black; height: 550px; width: 100%; display: flex; gap: 50px; justify-content: center;">
+        <div style="height: 200px; width: 20%;">
+          <img src="../Assets/product page reviews/King Birendra.jpg" alt="person1" style="height: 300px; width: 300px; border-radius: 100%;">
+          <h1 style="color: white; text-align: center;">King Birendra</h1><br>
+          <h2 style="color: white; text-align: center;">"This buying experience from richards was the most comfortable and price worthy as I got the most beautiful timepiece that I wanted..."</h2>
+        </div>
+        <div style="height: 200px; width: 20%;">
+          <img src="../Assets/product page reviews/Nelson_Mandela_1994.jpg" alt="person1" style="height: 300px; width: 300px; border-radius: 100%;">
+          <h1 style="color: white; text-align: center;">Nelson Mandela</h1><br>
+          <h2 style="color: white; text-align: center;">"The watches are exquisite quality and worth every single penny..."</h2>
+        </div>
+        <div style="height: 200px; width: 20%;">
+          <img src="../Assets/product page reviews/balen-shah.png" alt="person1" style="height: 300px; width: 300px; border-radius: 100%;">
+          <h1 style="color: white; text-align: center;">Balen Shah</h1><br>
+          <h2 style="color: white; text-align: center;">"Richard Mille makes the quality watches, I have a whole collection of Richard watches in my home..."</h2>
+        </div>
+      </div>
+
+      <footer> <!--footer starts here-->
+        <div class="about-logo"> <!--A div about our site-->
+          <h2>RICHARD MILLE</h2>
+          <br />
+          <p>
+            Discover the intricate craftsmanship of this luxury timepiece,
+            <br />designed with precision and elegance.
+          </p>
+        </div>
+        <div class="quick-links">
+          <h2>Quick Links</h2> <!--Links to our internal pages-->
+          <br />
+          <a href="../home_page.html">Home</a><br /><br />
+          <a href="../pages/blog_page.html">Blog</a><br /><br />
+          <a href="../pages/product_page.html">Product</a><br /><br />
+          <a href="../pages/about_us.html">About us</a><br /><br />
+          <a href="../pages/research_page.html">Research</a><br /><br />
+        </div>
+        <div class="contact-us-main">
+          <div class="contact-us"> <!--Contact us-->
+            <img src="../Assets/icons/call.png" alt="call" />
+            <div class="contact-us-text">
+              <p>+01-5423201</p>
+              <p>9844563721</p>
+            </div>
+          </div>
+          <br />
+          <div class="location"> <!--div containing our location-->
+            <img src="../Assets/icons/location.png" alt="location" />
+            <div class="location-text">
+              <p>Kamalpokhari, Nepal</p>
+            </div>
+          </div>
+          <br />
+          <div class="mail"> <!--Contact Us through mail-->
+            <img src="../Assets/icons/mail.png" alt="mail" />
+            <div class="mail-text">
+              <p>richardmille@gmail.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="partners"> <!--This div contains all the social links-->
+          <h2>Follow us</h2>
+          <br />
+          <div class="apps">
+            <a href="https://www.facebook.com/"
+              ><img src="../Assets/icons/facebook.png" alt="facebook"
+            /></a>
+            <a href="https://www.instagram.com/"
+              ><img src="../Assets/icons/insta.png" alt="insta"
+            /></a>
+            <a href="https://www.x.com/"
+              ><img src="../Assets/icons/twitter.png" alt="twitter"
+            /></a>
+            <a href="https://www.youtube.com/"
+              ><img src="../Assets/icons/yt.png" alt="yt"
+            /></a>
+            <a href="https://www.pinterest.com/"
+              ><img src="../Assets/icons/pin.png" alt="pin"
+            /></a>
+          </div>
+        </div>
+      </footer>
+      <div class="copy-right">RICHARD MILLE &copy; All Rights Reserved</div> <!--This is the trademark of our website-->
+    </div>
+
+    <script>
+      function handleScroll() { //This function will automatically scroll the page to our product list
+        document.querySelector(".bottom-part").scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+    </script>
+    <script src="../Js/product_page.js"></script>
+  </body>
+</html>
